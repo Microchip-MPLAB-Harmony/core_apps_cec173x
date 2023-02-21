@@ -1,0 +1,80 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.core_apps_cec173x_rtos_freertos_basic_freertos_cec1736_evb",
+		"version": "3.2.0",
+		"displayName": "FreeRTOS basic Example for CEC173x Family",
+		"projectName": "basic_freertos_cec1736_evb",
+		"shortDescription": "This example application shows how to use the I2C driver in asynchronous mode to perform operations on the EEPROM.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=6.0.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=4.2.0"
+			}
+		],
+		"dfp": {
+			"name": "CEC_DFP",
+			"semverRange": "^1.8.258"
+		},
+		"configurator": {
+			"name": "MCC",
+			"semverRange": ">=5.2.2"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "CEC1736_S0_2ZW",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit",
+				"CEC 173x Evaluation Board"
+			],
+			[
+				"Harmony",
+				"RTOS",
+				"FreeRTOS",
+				"Basic FreeRTOS"
+			],
+			[
+				"RTOS",
+				"FreeRTOS",
+				"BASIC_FREERTOS"
+			]
+		],
+		"peripherals": [
+			"BASIC_FREERTOS"
+		],
+		"keywords": [
+			"MCC",
+			"Harmony",
+			"CEC1736_S0_2ZW",
+			"CEC173x Family",
+			"RTOS",
+			"FreeRTOS",
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
