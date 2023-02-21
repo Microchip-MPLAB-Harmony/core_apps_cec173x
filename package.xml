@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <Package name="core_apps_cec173x">
     <Dependencies>
-        <Dependency name="core" version="v3.10.0"/>
-        <Dependency name="CEC173x_soteria_lib" version="v3.0.0"/>
+        <Dependency name="core" version="v3.12.0"/>
 </Dependencies>
 </Package>

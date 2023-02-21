@@ -16,7 +16,7 @@ Following table provides number of driver, system service and library examples a
 
 | Development Kits  | MPLAB X applications |
 |:-----------------:|:-------------------:|
-| [CEC173x Evaluation Board](https://www.microchip.com/DevelopmentTools/ProductDetails/)  | 1 |
+| [CEC173x Evaluation Board](https://www.microchip.com/en-us/development-tool/EV19K07A)  | 9 |
 
 ### New Features
 
@@ -28,7 +28,7 @@ Following table provides number of driver, system service and library examples a
 
 ### Development Tools
 
-- [MPLAB® X IDE v6.00](https://www.microchip.com/mplab/mplab-x-ide)
+- [MPLAB® X IDE v6.05](https://www.microchip.com/mplab/mplab-x-ide)
 - MPLAB® X IDE plug-ins:
-    - MPLAB® Code Configurator 5.1.1
-- [MPLAB® XC32 C/C++ Compiler v2.50](https://www.microchip.com/mplab/compilers)
+  - MPLAB® Code Configurator (MCC) v5.2.2
+- [MPLAB® XC32 C/C++ Compiler v4.21](https://www.microchip.com/mplab/compilers)
