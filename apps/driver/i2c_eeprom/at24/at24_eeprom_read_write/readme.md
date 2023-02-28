@@ -1,5 +1,5 @@
 ---
-parent: Harmony 3 driver and system service application examples for CEC 173X family
+parent: Harmony 3 driver and system service application examples for CEC173x family
 title: I2C EEPROM AT24 driver - EEPROM Read Write 
 has_children: false
 has_toc: false

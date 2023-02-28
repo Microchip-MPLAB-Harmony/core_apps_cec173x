@@ -21,7 +21,7 @@ timezone: America/Phoenix
 
 description: Harmony 3 driver and system service application examples for CEC173X family
 url: "https://microchip-mplab-harmony.github.io"
-baseurl: "/core_apps_cec73x"
+baseurl: "/core_apps_cec173x"
 remote_theme: "Microchip-MPLAB-Harmony/just-the-docs@mchp-harmony"
 
 # Build settings

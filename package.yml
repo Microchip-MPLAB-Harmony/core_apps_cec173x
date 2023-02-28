@@ -1,0 +1,14 @@
+package:
+  format-version: "1.0.0"
+  name: "core_apps_cec173x"
+  version: "v3.0.0"
+  type: "application"
+  status: "production"
+  required: true
+
+  dependencies:
+    - name: "core"
+      type: "package"
+      version: "v3.12.0"
+
+

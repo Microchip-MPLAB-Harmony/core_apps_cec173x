@@ -1,5 +1,5 @@
 ---
-parent: Harmony 3 driver and system service application examples for CEC 173X family
+parent: Harmony 3 driver and system service application examples for CEC173x family
 title: Time System Service multi-client 
 has_children: false
 has_toc: false
