@@ -72,6 +72,12 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
+/* Device Information */
+#define DEVICE_NAME			 "CEC1736_S0_2ZW"
+#define DEVICE_ARCH			 "CORTEX-M4"
+#define DEVICE_FAMILY		 "CEC173X"
+#define DEVICE_SERIES		 "CEC"
+
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 24000000
 

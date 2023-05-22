@@ -48,7 +48,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-static UART_OBJECT uart0Obj;
+volatile static UART_OBJECT uart0Obj;
 
 void UART0_Initialize( void )
 {
@@ -83,7 +83,12 @@ bool UART0_SerialSetup(UART_SERIAL_SETUP* setup, uint32_t srcClkFreq )
     uint32_t baud_clk_src = 1843200;
     uint32_t baud_div;
 
-    if((uart0Obj.rxBusyStatus == true) || (uart0Obj.txBusyStatus == true))
+    if (uart0Obj.rxBusyStatus == true)
+    {
+        /* Transaction is in progress, so return without updating settings */
+        return status;
+    }
+    if (uart0Obj.txBusyStatus == true)
     {
         /* Transaction is in progress, so return without updating settings */
         return status;
@@ -181,12 +186,17 @@ bool UART0_Write( void* buffer, const size_t size )
             uart0Obj.txBusyStatus = true;
             status = true;
 
+            size_t txProcessedSize = uart0Obj.txProcessedSize;
+            size_t txSize = uart0Obj.txSize;
+
             /* Initiate the transfer by writing as many bytes as we can */
-            while(((UART0_REGS->DATA.UART_LSR & UART_DATA_LSR_TRANS_EMPTY_Msk) != 0U) && (uart0Obj.txSize > uart0Obj.txProcessedSize) )
+            while(((UART0_REGS->DATA.UART_LSR & UART_DATA_LSR_TRANS_EMPTY_Msk) != 0U) && (txSize > txProcessedSize) )
             {
-                UART0_REGS->DATA.UART_TX_DAT = pTxBuffer[uart0Obj.txProcessedSize];
-                uart0Obj.txProcessedSize++;
+                UART0_REGS->DATA.UART_TX_DAT = pTxBuffer[txProcessedSize];
+                txProcessedSize++;
             }
+
+            uart0Obj.txProcessedSize = txProcessedSize;
 
             /* Enable UART0 Transmit holding register empty Interrupt */
             UART0_REGS->DATA.UART_IEN |= (UART_DATA_IEN_ETHREI_Msk);
@@ -246,7 +256,8 @@ bool UART0_ReadAbort(void)
         uart0Obj.rxBusyStatus = false;
 
         /* If required, application should read the num bytes processed prior to calling the read abort API */
-        uart0Obj.rxSize = uart0Obj.rxProcessedSize = 0;
+        uart0Obj.rxSize = 0;
+        uart0Obj.rxProcessedSize = 0;
     }
 
     return true;
@@ -269,9 +280,10 @@ size_t UART0_WriteCountGet( void )
     return uart0Obj.txProcessedSize;
 }
 
-static void UART0_ERROR_InterruptHandler (void)
+static void __attribute__((used)) UART0_ERROR_InterruptHandler (void)
 {
     uint8_t lsr;
+    bool rxBusyStatus = uart0Obj.rxBusyStatus;
 
     lsr = UART0_REGS->DATA.UART_LSR;
 
@@ -279,7 +291,7 @@ static void UART0_ERROR_InterruptHandler (void)
     lsr = (lsr & (UART_DATA_LSR_OVERRUN_Msk | UART_DATA_LSR_PE_Msk | UART_DATA_LSR_FRAME_ERR_Msk));
     uart0Obj.errors = lsr;
 
-    if ((uart0Obj.rxBusyStatus == true) && ((uint32_t)uart0Obj.errors != 0U))
+    if (((uint32_t)uart0Obj.errors != 0U) && (rxBusyStatus == true))
     {
         uart0Obj.rxBusyStatus = false;
 
@@ -288,17 +300,21 @@ static void UART0_ERROR_InterruptHandler (void)
 
         if(uart0Obj.rxCallback != NULL)
         {
-            uart0Obj.rxCallback(uart0Obj.rxContext);
+            uintptr_t rxContext = uart0Obj.rxContext;
+            uart0Obj.rxCallback(rxContext);
         }
     }
 }
 
-static void UART0_RX_InterruptHandler (void)
+static void __attribute__((used)) UART0_RX_InterruptHandler (void)
 {
     uint8_t lsr;
 
     if(uart0Obj.rxBusyStatus == true)
     {
+        size_t rxProcessedSize = uart0Obj.rxProcessedSize;
+        size_t rxSize = uart0Obj.rxSize;
+
         do
         {
             lsr = UART0_REGS->DATA.UART_LSR;
@@ -308,13 +324,15 @@ static void UART0_RX_InterruptHandler (void)
 
             if (((lsr & UART_DATA_LSR_DATA_READY_Msk) != 0U) && ((uint32_t)uart0Obj.errors == 0U))
             {
-                uart0Obj.rxBuffer[uart0Obj.rxProcessedSize] = UART0_REGS->DATA.UART_RX_DAT;
-                uart0Obj.rxProcessedSize++;
+                uart0Obj.rxBuffer[rxProcessedSize] = UART0_REGS->DATA.UART_RX_DAT;
+                rxProcessedSize++;
             }
-        }while(((lsr & UART_DATA_LSR_DATA_READY_Msk) != 0U) && ((uint32_t)uart0Obj.errors == 0U) && (uart0Obj.rxProcessedSize < uart0Obj.rxSize));
+        }while(((uint32_t)uart0Obj.errors == 0U) && ((lsr & UART_DATA_LSR_DATA_READY_Msk) != 0U) && (rxProcessedSize < rxSize));
+
+        uart0Obj.rxProcessedSize = rxProcessedSize;
 
         /* Check if the buffer is done */
-        if((uart0Obj.rxProcessedSize >= uart0Obj.rxSize) || ((uint32_t)uart0Obj.errors != 0U))
+        if(((uint32_t)uart0Obj.errors != 0U) || (rxProcessedSize >= rxSize))
         {
             uart0Obj.rxBusyStatus = false;
 
@@ -323,21 +341,26 @@ static void UART0_RX_InterruptHandler (void)
 
             if(uart0Obj.rxCallback != NULL)
             {
-                uart0Obj.rxCallback(uart0Obj.rxContext);
+                uintptr_t rxContext = uart0Obj.rxContext;
+                uart0Obj.rxCallback(rxContext);
             }
         }
     }
 }
 
-static void UART0_TX_InterruptHandler (void)
+static void __attribute__((used)) UART0_TX_InterruptHandler (void)
 {
     if(uart0Obj.txBusyStatus == true)
     {
-        UART0_REGS->DATA.UART_TX_DAT = uart0Obj.txBuffer[uart0Obj.txProcessedSize];
-        uart0Obj.txProcessedSize++;
+        size_t txProcessedSize = uart0Obj.txProcessedSize;
+
+        UART0_REGS->DATA.UART_TX_DAT = uart0Obj.txBuffer[txProcessedSize];
+        txProcessedSize++;
+
+        uart0Obj.txProcessedSize = txProcessedSize;
 
         /* Check if the buffer is done */
-        if(uart0Obj.txProcessedSize >= uart0Obj.txSize)
+        if(txProcessedSize >= uart0Obj.txSize)
         {
             uart0Obj.txBusyStatus = false;
 
@@ -346,13 +369,14 @@ static void UART0_TX_InterruptHandler (void)
 
             if(uart0Obj.txCallback != NULL)
             {
-                uart0Obj.txCallback(uart0Obj.txContext);
+                uintptr_t txContext = uart0Obj.txContext;
+                uart0Obj.txCallback(txContext);
             }
         }
     }
 }
 
-void UART0_InterruptHandler (void)
+void __attribute__((used)) UART0_InterruptHandler (void)
 {
     uint8_t int_id = 0;
 

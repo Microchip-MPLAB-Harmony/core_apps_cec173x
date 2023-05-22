@@ -1,4 +1,4 @@
-<config configName="cec1736_evb_freertos" projectName="cec1736_evb_freertos" configVersion="1.1" device="CEC1736_S0_2ZW" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.14">
+<config configName="cec1736_evb_freertos" projectName="cec1736_evb_freertos" configVersion="1.1" device="CEC1736_S0_2ZW" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -35,7 +35,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.2.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -4834,7 +4834,7 @@
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
          <file>..\src\config\cec1736_evb_freertos\definitions.h</file>
-         <hash>c036f87dcf0ff81f659bcce7c4badee9abc55233a2c290177feaef59bd6c35d1</hash>
+         <hash>1a4771955c4c701fe721d9e74a65f9895a33477d575d7add2ce1380c7529ef43</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\htm1.h</file>
@@ -4846,7 +4846,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\interrupts.c</file>
-         <hash>98ad837cb5140f5ec8f38e5a40368fb72e2d4c63cb2fd17758ef6736b4c48563</hash>
+         <hash>5fb3520eced8da07422ea5d955a496ee7cbed902902b560213547b5f40551e3d</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\libc_syscalls.c</file>
@@ -4858,11 +4858,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\task.h</file>
-         <hash>85a11a834d04120402087ac61190566f893480e9d6c8fe903218330dc4ea7d30</hash>
+         <hash>45f2245c914ed25ab26a1ea78ddd4ac74cb6522e1b26ac5c44b614ca4c8cee99</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\interrupts.h</file>
-         <hash>8d7367c6fd0545b261c2b58da7c066c4f215d52efeef918d3bf95cbe04ea398c</hash>
+         <hash>4d81b49a6787f6e950ff6444b02f10909875e34d176a5aaac65508d2cd57e41a</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\env_mon.h</file>
@@ -4870,15 +4870,15 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\timers.c</file>
-         <hash>dae8ab1093eed0eebd86eef7f4e777e3d249d98b75528ff3841d41ce1c8f3fa6</hash>
+         <hash>24962ef361f396aaa5e6e33776eeeddaf2fb251c87b6fe50602acc56c537b093</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\stream_buffer.h</file>
-         <hash>43bd2a4bf5d6495e04c8409187d8f31dfaee58d8f94d7e3a4fd9830e5d7e68dc</hash>
+         <hash>b876d839460197d94d0f95fb93c6aeb457f6fc572d32258480fed7d4de686b6b</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\osal\osal_freertos.c</file>
-         <hash>6f35cfd335587dd112d0ac648ae99539a5acbb98ba80ce6e8c7c855e7b8d7465</hash>
+         <hash>8092bb557d244984ab601e36d3dc25408c8b57f3c8f090aac491891b4a32cb28</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\dma_chan06.h</file>
@@ -4894,7 +4894,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\list.h</file>
-         <hash>f288a68b8559a1913dd663136711f7adcaf8b3430627d7102978be4d808a02eb</hash>
+         <hash>dc572f54391c0407fc25db360d912fca9118cddae7bd2e3099eb13f18804e5a9</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\tfdp.h</file>
@@ -4902,19 +4902,19 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\osal\osal_freertos.h</file>
-         <hash>ca5e502b9f076c4bdc8d97ac2e4cfdfa5d1b49f7d64222c353fac4dcd794bc7c</hash>
+         <hash>7ad9faa903d8587bab9490660328f134b8e027f9c24bca47201f3f96f3b99474</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\croutine.h</file>
-         <hash>b6da8ad0cb09303c87eb634679b97f56001c14f45acd1378103504699a95cad4</hash>
+         <hash>cf52c15fa26a8d4f82b55909b75ebfe2aab25468ba7780748912ddead9812b4e</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\osal\osal_definitions.h</file>
-         <hash>6dc49e317b4557c5516a172c1437125874abd98ffcc7260e3422966078dcef7f</hash>
+         <hash>af2f2336fac0fd5b49fb2d1c8f81baa4f554101b06f130aaa608cd9685c4ac35</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\initialization.c</file>
-         <hash>be82dcd318f81fe3d022d1acf60c3e0f6f94bae679526a7190cd4bc61f1a9479</hash>
+         <hash>839f8be1a1644422416420d903a560d77752ff5020c419198ba18b359b19c81b</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\dma_chan02.h</file>
@@ -4922,7 +4922,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\croutine.c</file>
-         <hash>4566d5abfceea128a553ecf2bbb22b9d7c9c8a1d3c1f02f9091182b5290d02fc</hash>
+         <hash>ebf0cdce261dc4a256c06c0d4ad2582e6026a6da0e973d4cb92092e94ce8f370</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\qmspi.h</file>
@@ -4930,7 +4930,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\FreeRTOSConfig.h</file>
-         <hash>c1ab95a5e08ecadc239d3b615f03e2dd1efd8efe5b7d03b63426db8e5db3e53b</hash>
+         <hash>efcaae0e80898662bccc7c1e7b07dc23f29ab54d4848392d8c2b8c63935034dc</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\gcr.h</file>
@@ -4950,7 +4950,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\portable.h</file>
-         <hash>c95eb0d549ff1c20edebfec41d73584b5a20d21df20a724084200954b9e8d252</hash>
+         <hash>7ade8f368002778c723b3c4e14084910b7225cd36363ed0c948e9ea36c6f251f</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\smb.h</file>
@@ -4962,7 +4962,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\list.c</file>
-         <hash>21fe8dd565f9610e1ff4a6bf7bebbd16842af13d3d2294f1dc67ad279fb01d22</hash>
+         <hash>db5c169cf3efd68da1c6a923ac84eebc724d602c940bde0b9b5f01f05028fde4</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\ec_reg_bank.h</file>
@@ -4986,7 +4986,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\mpu_prototypes.h</file>
-         <hash>783d9a41c90817eec55d9317475cc2663a785fc9a955c06d3207fcee6e0ec080</hash>
+         <hash>2b46a2511ce5d23a56bc83079333d8d0a2e33763e5829c9383252806887a3dc0</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\gcr.h</file>
@@ -5010,7 +5010,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\freertos_hooks.c</file>
-         <hash>1c31f7febed38afbcb09d11b002c5dddda98c7ed7aba9ff8f8e32b8c5f288a47</hash>
+         <hash>ee4a4dfc44aa3d45b99065a3d972818fcbd019d39450a67f168aa7f047f55149</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
@@ -5018,11 +5018,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\FreeRTOS.h</file>
-         <hash>c8d9b7a52d092f37b4c3b821806bd6e8a30dbcc600960f9aed2b2f10f965c09f</hash>
+         <hash>03e9c94aba57e3cf7f4f73bc2d3eb4a96ae38f3425eedb5450622ca286475a0b</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\system\debug\sys_debug.h</file>
-         <hash>222cdc284bd651e83188b9641cc57c133cf86563dbeb5d5523766d4a36087165</hash>
+         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\wdt.h</file>
@@ -5050,7 +5050,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\system\int\sys_int.h</file>
-         <hash>71e36331ee689ae305b3d8ec49948e3dde0324b65f51bf38f4472b900a421ed6</hash>
+         <hash>dc104ae181fd5309e1bb42896246644fae95915a8e639b23ecfccc8840850274</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\vtr_reg_bank.h</file>
@@ -5062,15 +5062,15 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\osal\osal.h</file>
-         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\driver\usart\drv_usart_definitions.h</file>
-         <hash>a559eeeadb21a3e3f65a512bed1ff88da6d2e162d0a39d025afbd0bb7f6f6d9d</hash>
+         <hash>214eb352dd2799b2f485b88befc882e793dd00ba4554568cf9b5935d71a42eec</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\peripheral\nvic\plib_nvic.c</file>
-         <hash>45ccccd4396ef9ede1f119f601b240ef3962170540d305f0ac7836dbe834de2d</hash>
+         <hash>4c2b935d9200059f739cc4d622f9dbfb68974d05b81eb13d2ce9251ef0009c5d</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\spt.h</file>
@@ -5098,11 +5098,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\queue.h</file>
-         <hash>ff7a2139380ad0e2695bbc0d068db7a3b7e54ec41387b4c77acbe1aaa2921b7c</hash>
+         <hash>1b61c1669091e59798a34c32c0f1e234d3f6a645f47641753eceeb7e1d9ce628</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\driver\usart\drv_usart.h</file>
-         <hash>38c9b2141416ac19cc67edf851ed6ab381d5c19c8878c8460df6a3190703dba7</hash>
+         <hash>e13f2ded2fac55dd1f1522f341758ecac9115aef3acb88102a0ebcbe83cbdf79</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\smb4.h</file>
@@ -5110,7 +5110,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\driver\usart\src\drv_usart_local.h</file>
-         <hash>eceb6780ca548113eaa453f217ff38bf88b42c3ee4ab7b4bd550cee84ce2b93a</hash>
+         <hash>7fe9089e87e888d8193a44547cae86afc6f2dce6eb0225f1b6a24b882d593ac4</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\cct.h</file>
@@ -5134,7 +5134,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\startup_xc32.c</file>
-         <hash>5c7069cf4c253dac56689121d7bb12822596270ec68403997865486b57e0561b</hash>
+         <hash>ae8889b90560858b225c5e014a4c3e0fc8052db4011f079d84d15222fe4d4d2b</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\peripheral\ecia\plib_ecia.c</file>
@@ -5146,7 +5146,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\tasks.c</file>
-         <hash>97cf9d38b44d673b83396837539994f490d71a7d1780c67b6cd8ab3860a3e19e</hash>
+         <hash>7d9b9add92194256502b4e497eb32e2c3014bc25c65650b4c446860dde3ff582</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\peripheral\ecia\plib_ecia.h</file>
@@ -5154,7 +5154,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\peripheral\gpio\plib_gpio.c</file>
-         <hash>d9a671e37d21238b1f7cc83e6bf13cfbc2049f4115d437b708b0de14eb566b91</hash>
+         <hash>b7f1550c70570badf85bd8dee4e41ed9fa9b8cab376362616634fbbb6fb2e191</hash>
       </entry>
       <entry>
          <file>..\src\main.c</file>
@@ -5170,11 +5170,11 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\toolchain_specifics.h</file>
-         <hash>c93f9d68b1623668727be21b4449250a7e4a5d7040776d6f6d604a7528ffc9eb</hash>
+         <hash>a4f1774c6f1f8c6cd522567536c9e9d75ca63259b868015ac9b0fb0aeeffe1f4</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\deprecated_definitions.h</file>
-         <hash>1947473678873963f3193497280d907f59a5936f92df6395327f7ca684cb1aa6</hash>
+         <hash>35000a143464bbbd8df7c9a6f066a64598a24da5174a7be33972e62bfbd75f4d</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\vtr_reg_bank.h</file>
@@ -5190,7 +5190,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\peripheral\ec_reg_bank\plib_ec_reg_bank.c</file>
-         <hash>3284ab602c3e11a5460d8d2a0e106f1a4e7e089b5ecca1b3061cfd35dca0208c</hash>
+         <hash>52d72bd521bc62868a7d73b37f7634fd7d91766760ce71c78ce83cb46446161b</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\imspi.h</file>
@@ -5198,7 +5198,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\system\system_common.h</file>
-         <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\ec_reg_bank.h</file>
@@ -5234,11 +5234,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\semphr.h</file>
-         <hash>6bc571df5182f06bcafe5280fdf762bbba2bf1dbb7867ae3721ce2d7e3e51dae</hash>
+         <hash>c624e8cdfc07844d4cf35382f3cc908c872375c7a3048482bdc110bda88cc4f2</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\timers.h</file>
-         <hash>2bf5b5f5d83684c1e6d90e5bd17da9de41d38ed61ec0410f94595ff343f89174</hash>
+         <hash>ee0f596a54137e26ca806ebf067c4c6219a61348f1cbae8861a43d2d4891e1f9</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\peripheral\pcr\plib_pcr.c</file>
@@ -5254,7 +5254,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\FreeRTOS_tasks.c</file>
-         <hash>f97f4e54a7511e5aea34f583061c628bf718b1024af6ec4cff55cb50365305da</hash>
+         <hash>14020d617b96dd2814e1211f6e3b645bcf5e2bd3179c23fe7dd16bc666fe9463</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\CEC1736_S0_2ZW.ld</file>
@@ -5266,7 +5266,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\event_groups.c</file>
-         <hash>82542c835466f2abd0eeb2988a0bcecf3d6a14c9dd87ad4a7ca325b15afbce95</hash>
+         <hash>76e967b14d231e4f31f014f1564f359a7bfd36bfa263ee6f437afa8c056df657</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\otp.h</file>
@@ -5322,7 +5322,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\MemMang\heap_1.c</file>
-         <hash>d03a08079e678cc6e6a1e2105684ab0082d190bbb731f6807d75e1aca260e98f</hash>
+         <hash>286e3fee81c9107fc6dec40405f500cabdca56836d29747c182f0899bb8997fd</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang_ltm.h</file>
@@ -5330,7 +5330,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\stack_macros.h</file>
-         <hash>06b5b66a9b98ad4998c82d353c0108b9db1a846951b8865cbdeeef90c5bbe2fe</hash>
+         <hash>3cddf2b3d47ae387e376ac75eb468f9d8ffb575d68c143e08d54af4087474cce</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\cec1736_evb_freertos\sys_tasks.h</file>
+         <hash>8e1a48dc226e9af26c57fc69ba76d2de0279f4bbc96e071a57fd0911a782545d</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\htm0.h</file>
@@ -5342,11 +5346,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\projdefs.h</file>
-         <hash>292c78c91dbf63a6aa028f381b1dd548d549949f4fb9fcfd97f949569e013d76</hash>
+         <hash>8faf4220ded25b00fd72424a2fa4e63e154713ae7b42f7270f1e3289362a6312</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\system\int\src\sys_int.c</file>
-         <hash>23e798871ce6f7b4b0e0dbd5cb2cad7b43bd2dd1f38152f28d14f5a5b7a2938b</hash>
+         <hash>4281667cc2b84c9e4be1f0dfb3f7d42b77d36c5dcf6513d29ff40262f746cfc6</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\imspi.h</file>
@@ -5358,11 +5362,11 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\driver\usart\src\drv_usart.c</file>
-         <hash>057043852650cb79ed1170b76e743559f8f93ac50a8c4e8a4db7388002f997bb</hash>
+         <hash>a305c6149f63590ebeaa4a805c26e2882cacd1224a3ea8bb35a1d1203e4fa019</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\message_buffer.h</file>
-         <hash>0f5a90e8303d9aa2a9c897d6b90da50df21776c6bde7bf8c792cacffa3048c8d</hash>
+         <hash>9a8141d3d6c8044a57d7e448180c9bd2ed32e45ded32be288d095a39dced91ab</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\dma_chan03.h</file>
@@ -5374,7 +5378,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\exceptions.c</file>
-         <hash>b268111879b5fa0ab2eaf79fc5d4bd1aa046c54d97805246ce08964100a70bfb</hash>
+         <hash>89852728a9a1cc4c9746839cc3caf5308b8698c0c30bf6bfbad0db9e552a387e</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\dma_chan07.h</file>
@@ -5386,7 +5390,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\event_groups.h</file>
-         <hash>a73c0b319370116d5981d5dacbabad3a775f85ae540ef70b4ced1c99c9ac6cd5</hash>
+         <hash>7b3dd12a50d649c124c1af8be742671b9965b6f924310bda7984fe1b65c7f54a</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\dma_chan01.h</file>
@@ -5394,7 +5398,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\queue.c</file>
-         <hash>4452e3b0e6446b74c7d010d308072ba0a35c1f92bcf3882a54bf3796a72517aa</hash>
+         <hash>5cdf4fa35fe059446effff5bf20deaf83ddffb08921bc198fda106b1d17dd894</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\wdt.h</file>
@@ -5402,15 +5406,15 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\system\int\sys_int_mapping.h</file>
-         <hash>660e7081f93de17660144721849acf269925988a4f6510028d25903aaa866ea1</hash>
+         <hash>5abf8528dabc1b17378f5d137870597037214fddf33880fa40e9263352da3008</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\include\mpu_wrappers.h</file>
-         <hash>0f7a750669b24c41af51482eb76c867a1ed11c14dd4877d07433db3953d9a792</hash>
+         <hash>5014408cc33f0f616215f2b48c67b0d47ccc35bfd5f0044ac653b5bbc6cf5778</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\system\system_module.h</file>
-         <hash>981fac23277aa77f682e7a9a28d436f892006cd5b4c7f23f50941b6d9a30e740</hash>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\gpio.h</file>
@@ -5434,7 +5438,7 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\GCC\SAM\ARM_CM4F\port.c</file>
-         <hash>8aa709759655b1711b28ea943b232a8c7f3ddbbb06f6c05f4328c681b223a734</hash>
+         <hash>11f2202099ed9a73f5ae5ef9dac414f6d9b257d6480bd9c9a1e38a71b3ee8d41</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\pwm.h</file>
@@ -5446,11 +5450,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\stream_buffer.c</file>
-         <hash>a62731cd211dd9caf70958b229d4a3a607ef12e6fbfec573a0d089f21c45f34f</hash>
+         <hash>0ec303ba296caca5de955dc470bcadd134fb15b192ddf61c9afc92070bc1039a</hash>
       </entry>
       <entry>
          <file>..\src\third_party\rtos\FreeRTOS\Source\portable\GCC\SAM\ARM_CM4F\portmacro.h</file>
-         <hash>a0cc3996ab10e9dce31b6665502e7a1328d134383d467b16e0aab205a7b07ccb</hash>
+         <hash>d569e2a29af1c742b69cb16e15d256611fa7979bda2b355e03426d3c40369e42</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\instance\tfdp.h</file>
@@ -5458,7 +5462,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\peripheral\uart\plib_uart0.c</file>
-         <hash>b0bd705ecadc700a04403c935061ae1dc787368d7f66f5e4f8d574ab557dba98</hash>
+         <hash>0753759ea2069ca9947a7b226be34437818e3d9a4bbe2f23e971f84fc262a91d</hash>
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb_freertos\peripheral\uart\plib_uart_common.h</file>
