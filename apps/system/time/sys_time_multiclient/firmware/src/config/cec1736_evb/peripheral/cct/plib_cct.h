@@ -109,6 +109,10 @@ void CCT_CompareChannel0OutputSet( void );
 
 void CCT_CompareChannel0OutputClear( void );
 
+void CCT_CompareChannel0InterruptEnable( void );
+
+void CCT_CompareChannel0InterruptDisable( void );
+
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility

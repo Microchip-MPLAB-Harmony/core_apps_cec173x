@@ -56,7 +56,7 @@
 
 
 
-static CCT_CALLBACK_OBJ CCT_CMP0_CallbackObject;
+volatile static CCT_CALLBACK_OBJ CCT_CMP0_CallbackObject;
 
 void CCT_Initialize(void)
 {
@@ -71,9 +71,9 @@ void CCT_Initialize(void)
 
 
 
-    
+
     CCT_REGS->CCT_COMP0 = 32768;
-    
+
 }
 
 /* Brings timer block in running state */
@@ -195,15 +195,16 @@ void CCT_CompareChannel0InterruptDisable( void )
 
 
 
-void CCT_CMP0_InterruptHandler(void)
+void __attribute__((used)) CCT_CMP0_InterruptHandler(void)
 {
     if (ECIA_GIRQResultGet(ECIA_DIR_INT_SRC_CCT_CMP0) != 0U)
     {
         ECIA_GIRQSourceClear(ECIA_DIR_INT_SRC_CCT_CMP0);
-        
+
         if (CCT_CMP0_CallbackObject.callback != NULL)
         {
-            CCT_CMP0_CallbackObject.callback(CCT_CMP0_CallbackObject.context);
+            uintptr_t context = CCT_CMP0_CallbackObject.context;
+            CCT_CMP0_CallbackObject.callback(context);
         }
     }
 }
