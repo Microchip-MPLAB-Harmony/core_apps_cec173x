@@ -63,6 +63,7 @@
           <itemPath>../src/config/cec1736_evb/user.h</itemPath>
           <itemPath>../src/config/cec1736_evb/device.h</itemPath>
           <itemPath>../src/config/cec1736_evb/device_vectors.h</itemPath>
+          <itemPath>../src/config/cec1736_evb/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -517,7 +518,7 @@
         <property key="memories.programmemory.ranges" value="c8000-117fff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="C:/h3_core_apps/core_apps_cec173x/apps/system/console_debug/firmware/cec1736_evb.X/debug/cec1736_evb/cec1736_evb_ptg"/>
+                  value="C:/h3_core_apps/core_apps_cec173x/apps/system/console_debug/sys_console_debug_uart_read_write/firmware/cec1736_evb.X/debug/cec1736_evb/cec1736_evb_ptg"/>
         <property key="programmerToGoImageName" value="cec1736_evb_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

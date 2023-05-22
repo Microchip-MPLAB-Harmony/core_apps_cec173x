@@ -48,19 +48,19 @@
 // *****************************************************************************
 // *****************************************************************************
 
-static UART_RING_BUFFER_OBJECT uart0Obj;
+volatile static UART_RING_BUFFER_OBJECT uart0Obj;
 
 #define UART0_READ_BUFFER_SIZE      128
 #define UART0_RX_INT_DISABLE()      UART0_REGS->DATA.UART_IEN &= ~(UART_DATA_IEN_ERDAI_Msk | UART_DATA_IEN_ELSI_Msk)
 #define UART0_RX_INT_ENABLE()       UART0_REGS->DATA.UART_IEN |= (UART_DATA_IEN_ERDAI_Msk | UART_DATA_IEN_ELSI_Msk)
 
-static uint8_t UART0_ReadBuffer[UART0_READ_BUFFER_SIZE];
+volatile static uint8_t UART0_ReadBuffer[UART0_READ_BUFFER_SIZE];
 
 #define UART0_WRITE_BUFFER_SIZE     512
 #define UART0_TX_INT_DISABLE()      UART0_REGS->DATA.UART_IEN &= ~(UART_DATA_IEN_ETHREI_Msk)
 #define UART0_TX_INT_ENABLE()       UART0_REGS->DATA.UART_IEN |= (UART_DATA_IEN_ETHREI_Msk)
 
-static uint8_t UART0_WriteBuffer[UART0_WRITE_BUFFER_SIZE];
+volatile static uint8_t UART0_WriteBuffer[UART0_WRITE_BUFFER_SIZE];
 
 void UART0_Initialize( void )
 {
@@ -170,7 +170,9 @@ static inline bool UART0_RxPushByte(uint8_t rdByte)
         /* Queue is full - Report it to the application. Application gets a chance to free up space by reading data out from the RX ring buffer */
         if(uart0Obj.rdCallback != NULL)
         {
-            uart0Obj.rdCallback(UART_EVENT_READ_BUFFER_FULL, uart0Obj.rdContext);
+            uintptr_t rdContext = uart0Obj.rdContext;
+
+            uart0Obj.rdCallback(UART_EVENT_READ_BUFFER_FULL, rdContext);
 
             /* Read the indices again in case application has freed up space in RX ring buffer */
             tempInIndex = uart0Obj.rdInIndex + 1U;
@@ -185,7 +187,9 @@ static inline bool UART0_RxPushByte(uint8_t rdByte)
     /* Attempt to push the data into the ring buffer */
     if (tempInIndex != uart0Obj.rdOutIndex)
     {
-        UART0_ReadBuffer[uart0Obj.rdInIndex] = rdByte;
+        uint32_t rdInIndex = uart0Obj.rdInIndex;
+
+        UART0_ReadBuffer[rdInIndex] = rdByte;
 
         uart0Obj.rdInIndex = tempInIndex;
 
@@ -210,18 +214,20 @@ static void UART0_ReadNotificationSend(void)
 
         if(uart0Obj.rdCallback != NULL)
         {
+            uintptr_t rdContext = uart0Obj.rdContext;
+
             if (uart0Obj.isRdNotifyPersistently == true)
             {
                 if (nUnreadBytesAvailable >= uart0Obj.rdThreshold)
                 {
-                    uart0Obj.rdCallback(UART_EVENT_READ_THRESHOLD_REACHED, uart0Obj.rdContext);
+                    uart0Obj.rdCallback(UART_EVENT_READ_THRESHOLD_REACHED, rdContext);
                 }
             }
             else
             {
                 if (nUnreadBytesAvailable == uart0Obj.rdThreshold)
                 {
-                    uart0Obj.rdCallback(UART_EVENT_READ_THRESHOLD_REACHED, uart0Obj.rdContext);
+                    uart0Obj.rdCallback(UART_EVENT_READ_THRESHOLD_REACHED, rdContext);
                 }
             }
         }
@@ -387,18 +393,20 @@ static void UART0_WriteNotificationSend(void)
 
         if(uart0Obj.wrCallback != NULL)
         {
+            uintptr_t wrContext = uart0Obj.wrContext;
+
             if (uart0Obj.isWrNotifyPersistently == true)
             {
                 if (nFreeWrBufferCount >= uart0Obj.wrThreshold)
                 {
-                    uart0Obj.wrCallback(UART_EVENT_WRITE_THRESHOLD_REACHED, uart0Obj.wrContext);
+                    uart0Obj.wrCallback(UART_EVENT_WRITE_THRESHOLD_REACHED, wrContext);
                 }
             }
             else
             {
                 if (nFreeWrBufferCount == uart0Obj.wrThreshold)
                 {
-                    uart0Obj.wrCallback(UART_EVENT_WRITE_THRESHOLD_REACHED, uart0Obj.wrContext);
+                    uart0Obj.wrCallback(UART_EVENT_WRITE_THRESHOLD_REACHED, wrContext);
                 }
             }
         }
@@ -520,7 +528,7 @@ UART_ERROR UART0_ErrorGet( void )
     return errors;
 }
 
-static void UART0_ERROR_InterruptHandler (void)
+static void __attribute__((used)) UART0_ERROR_InterruptHandler (void)
 {
     uint8_t lsr;
 
@@ -533,11 +541,12 @@ static void UART0_ERROR_InterruptHandler (void)
     /* Client must call UARTx_ErrorGet() function to clear the errors */
     if( uart0Obj.rdCallback != NULL )
     {
-        uart0Obj.rdCallback(UART_EVENT_READ_ERROR, uart0Obj.rdContext);
+        uintptr_t rdContext = uart0Obj.rdContext;
+        uart0Obj.rdCallback(UART_EVENT_READ_ERROR, rdContext);
     }
 }
 
-static void UART0_RX_InterruptHandler (void)
+static void __attribute__((used)) UART0_RX_InterruptHandler (void)
 {
     if (UART0_RxPushByte( UART0_REGS->DATA.UART_RX_DAT ) == true)
     {
@@ -549,7 +558,7 @@ static void UART0_RX_InterruptHandler (void)
     }
 }
 
-static void UART0_TX_InterruptHandler (void)
+static void __attribute__((used)) UART0_TX_InterruptHandler (void)
 {
     uint8_t wrByte;
 
@@ -567,7 +576,7 @@ static void UART0_TX_InterruptHandler (void)
     }
 }
 
-void UART0_InterruptHandler (void)
+void __attribute__((used)) UART0_InterruptHandler (void)
 {
     uint8_t int_id = 0;
 
