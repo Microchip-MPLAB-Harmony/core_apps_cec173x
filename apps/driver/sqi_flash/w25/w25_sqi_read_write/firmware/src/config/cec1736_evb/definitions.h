@@ -55,10 +55,10 @@
 #include "peripheral/ecia/plib_ecia.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/ec_reg_bank/plib_ec_reg_bank.h"
+#include "driver/w25/drv_w25.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "driver/w25/drv_w25.h"
 #include "app.h"
 
 
@@ -70,6 +70,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "CEC1736_S0_2ZW"
+#define DEVICE_ARCH			 "CORTEX-M4"
+#define DEVICE_FAMILY		 "CEC173X"
+#define DEVICE_SERIES		 "CEC"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 24000000

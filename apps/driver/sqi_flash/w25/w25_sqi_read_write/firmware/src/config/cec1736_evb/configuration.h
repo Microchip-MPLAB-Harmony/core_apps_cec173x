@@ -88,10 +88,10 @@ extern "C" {
 // *****************************************************************************
 /* W25 Driver Instance Configuration */
 #define DRV_W25_INDEX                 0
-#define DRV_W25_CLIENTS_NUMBER        1
-#define DRV_W25_START_ADDRESS         0x0
-#define DRV_W25_PAGE_SIZE             256
-#define DRV_W25_ERASE_BUFFER_SIZE     4096
+#define DRV_W25_CLIENTS_NUMBER        1U
+#define DRV_W25_START_ADDRESS         0x0U
+#define DRV_W25_PAGE_SIZE             256U
+#define DRV_W25_ERASE_BUFFER_SIZE     4096U
 
 
 
