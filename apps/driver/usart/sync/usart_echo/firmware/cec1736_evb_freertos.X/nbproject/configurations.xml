@@ -293,7 +293,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>cec1736_evb_freertos.mc3</itemPath>
+      <itemPath>sync_usart_echo_cec1736_evb_freertos.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

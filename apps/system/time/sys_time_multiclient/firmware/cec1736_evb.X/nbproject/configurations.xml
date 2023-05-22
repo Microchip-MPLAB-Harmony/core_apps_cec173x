@@ -229,7 +229,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>cec1736_evb.mc3</itemPath>
+      <itemPath>sys_time_multiclient_cec1736_evb.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

@@ -238,7 +238,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>cec1736_evb.mc3</itemPath>
+      <itemPath>at24_eeprom_read_write_cec1736_evb.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

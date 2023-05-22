@@ -232,7 +232,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>cec1736_evb.mc3</itemPath>
+      <itemPath>sys_console_debug_uart_read_write_cec1736_evb.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -517,7 +517,7 @@
         <property key="memories.programmemory.ranges" value="c8000-117fff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="C:/h3_core_apps/core_apps_cec173x/apps/system/console_debug/sys_console_debug_uart_read_write/firmware/cec1736_evb.X/debug/cec1736_evb/cec1736_evb_ptg"/>
+                  value="C:/h3_core_apps/core_apps_cec173x/apps/system/console_debug/firmware/cec1736_evb.X/debug/cec1736_evb/cec1736_evb_ptg"/>
         <property key="programmerToGoImageName" value="cec1736_evb_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
