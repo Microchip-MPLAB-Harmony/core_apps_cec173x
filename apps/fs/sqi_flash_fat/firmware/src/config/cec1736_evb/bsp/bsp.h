@@ -40,8 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _BSP_H
-#define _BSP_H
+#ifndef BSP_H
+#define BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -60,6 +60,9 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
+#define cec1736_evb
+#define BSP_NAME             "cec1736_evb"
+
 /*** LED Macros for LED4 ***/
 #define LED4_Toggle() (GPIO_REGS->GPIO_CTRL0[3] ^= GPIO_CTRL0_ALT_GPIO_DATA_Msk)
 #define LED4_On() (GPIO_REGS->GPIO_CTRL0[3] |= GPIO_CTRL0_ALT_GPIO_DATA_Msk)
@@ -105,7 +108,6 @@
 
   Example:
     <code>
-    //Initialize the BSP
     BSP_Initialize();
     </code>
 
@@ -115,7 +117,7 @@
 
 void BSP_Initialize(void);
 
-#endif // _BSP_H
+#endif // BSP_H
 
 /*******************************************************************************
  End of File
