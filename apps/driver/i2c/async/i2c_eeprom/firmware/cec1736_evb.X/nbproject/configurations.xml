@@ -64,6 +64,7 @@
           <itemPath>../src/config/cec1736_evb/configuration.h</itemPath>
           <itemPath>../src/config/cec1736_evb/device.h</itemPath>
           <itemPath>../src/config/cec1736_evb/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/cec1736_evb/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -234,7 +235,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>async_i2c_eeprom_cec1736_cec1736_evb.mc3</itemPath>
+      <itemPath>async_i2c_eeprom_cec1736_evb.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -251,8 +252,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
         <pack name="CEC_DFP" vendor="Microchip" version="1.8.258"/>
+        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
