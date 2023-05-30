@@ -4,18 +4,18 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.core_apps_cec173x_fs_sqi_flash_fat_cec1736_evb",
-		"version": "3.2.0",
+		"version": "3.1.0",
 		"displayName": "FAT filesystem using W25 Media Example for CEC173x Family",
 		"projectName": "async_i2c_eeprom_cec1736_evb",
 		"shortDescription": "This application shows an example of using the FAT File System to access QMSPI based W25 flash media",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.0.0"
+			"semverRange": ">=6.5.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.2.0"
+				"semverRange": ">=4.21.0"
 			}
 		],
 		"dfp": {
@@ -24,7 +24,7 @@
 		},
 		"configurator": {
 			"name": "MCC",
-			"semverRange": ">=5.2.2"
+			"semverRange": ">=5.3.0"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
@@ -46,11 +46,11 @@
 				"Harmony",
 				"Drivers",
 				"SQI",
-                "W25"
+				"W25"
 			],
 			[
 				"Peripherals",
-				"SQI",
+				"SQI"
 			]
 		],
 		"peripherals": [
@@ -62,10 +62,10 @@
 			"CEC1736_S0_2ZW",
 			"CEC173x Family",
 			"SQI",
-            "W25",
-            "SQI Flash",
-            "File System",
-            "FAT"
+			"W25",
+			"SQI Flash",
+			"File System",
+			"FAT"
 		],
 		"additionalData": {
 			"longDescription": {

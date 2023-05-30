@@ -4,18 +4,18 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.core_apps_cec173x_rtos_freertos_basic_freertos_cec1736_evb",
-		"version": "3.2.0",
+		"version": "3.1.0",
 		"displayName": "FreeRTOS basic Example for CEC173x Family",
 		"projectName": "basic_freertos_cec1736_evb",
 		"shortDescription": "This example application shows how to use the I2C driver in asynchronous mode to perform operations on the EEPROM.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=6.0.0"
+			"semverRange": ">=6.5.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=4.2.0"
+				"semverRange": ">=4.21.0"
 			}
 		],
 		"dfp": {
@@ -24,7 +24,7 @@
 		},
 		"configurator": {
 			"name": "MCC",
-			"semverRange": ">=5.2.2"
+			"semverRange": ">=5.3.0"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
@@ -63,7 +63,7 @@
 			"CEC1736_S0_2ZW",
 			"CEC173x Family",
 			"RTOS",
-			"FreeRTOS",
+			"FreeRTOS"
 		],
 		"additionalData": {
 			"longDescription": {
