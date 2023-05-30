@@ -38,10 +38,10 @@ The following applications are provided to demonstrate the typical or interestin
 | ---- | ----------- |
 | [I2C driver asynchronous - I2C EEPROM](apps/driver/i2c/async/i2c_eeprom/readme.md) | This example application shows how to use the I2C driver in asynchronous mode to perform operations on the EEPROM |
 | [I2C EEPROM AT24 driver - EEPROM Read Write](apps/driver/i2c_eeprom/at24/at24_eeprom_read_write/readme.md) | This example application shows how to use the AT24 driver to perform read and write operations on AT24 series of EEPROM |
-| [W25 SQI flash driver - Flash read write in Quad IO mode](apps/driver/sqi_flash/w25/w25_sqi_read_write/readme.md) |This example application shows how to use the W25 SQI flash driver to perform block operations on the On-Board W25 Flash memory in Quad IO mode |
-| [USART driver asynchronous - USART echo](apps/driver/usart/async/usart_echo/readme.md) | This example echoes the received characters over the console using the USART driver in asynchronous mode |
-| [USART driver asynchronous - USART multi instance](apps/driver/usart/async/usart_multi_instance/readme.md) | This example echoes the received characters over the two consoles using the USART driver in asynchronous mode |
-| [FAT filesystem using W25 Media](apps/fs/sqi_flash_fat/readme.md) | This application shows an example of using the FAT File System to access QMSPI based W25 flash media |
+| [W25 SQI flash driver - Flash read write in Quad IO mode](apps/driver/sqi_flash/w25/w25_sqi_read_write/readme.md) | This example application shows how to use the W25 SQI flash driver to perform block operations on the On-Board W25 Flash memory in Quad IO mode |
+| [USART driver asynchronous - UART echo](apps/driver/usart/async/usart_echo/readme.md) | This example echoes the received characters over the console using the USART driver in asynchronous mode |
+| [USART driver synchronous - UART echo](apps/driver/usart/sync/usart_echo/readme.md) | This example echoes the received characters over the console using the USART driver in synchronous mode |
+| [FAT filesystem using W25 Media](apps/fs/sqi_flash_fat/readme.md) | This application shows an example of using the FAT File System to access QMSPI based W25 flash media  |
 | [FreeRTOS basic](apps/rtos/freertos/basic_freertos/readme.md) | This example application demonstrates context switching between four tasks of different priorites. Two tasks run periodically while the other two tasks are event driven |
 | [Console Debug System Service using UART](apps/system/console_debug/sys_console_debug_uart_read_write/readme.md) | This example application demonstrates the UART based console and debug system service |
 | [Time System Service multi-client](apps/system/time/sys_time_multiclient/readme.md) | This example application demonstrates the multi-client system timer functionality |
