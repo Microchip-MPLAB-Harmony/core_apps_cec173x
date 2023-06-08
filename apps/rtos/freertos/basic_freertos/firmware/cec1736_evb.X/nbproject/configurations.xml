@@ -39,6 +39,7 @@
           <itemPath>../src/config/cec1736_evb/device_vectors.h</itemPath>
           <itemPath>../src/config/cec1736_evb/device_cache.h</itemPath>
           <itemPath>../src/config/cec1736_evb/user.h</itemPath>
+          <itemPath>../src/config/cec1736_evb/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -251,6 +252,7 @@
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>basic_freertos_cec1736_evb.mc3</itemPath>
+      <itemPath>../src/config/cec1736_evb/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

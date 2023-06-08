@@ -60,6 +60,7 @@
           <itemPath>../src/config/cec1736_evb_freertos/definitions.h</itemPath>
           <itemPath>../src/config/cec1736_evb_freertos/FreeRTOSConfig.h</itemPath>
           <itemPath>../src/config/cec1736_evb_freertos/user.h</itemPath>
+          <itemPath>../src/config/cec1736_evb_freertos/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -278,6 +279,7 @@
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>sync_usart_echo_cec1736_evb_freertos.mc3</itemPath>
+      <itemPath>../src/config/cec1736_evb_freertos/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
