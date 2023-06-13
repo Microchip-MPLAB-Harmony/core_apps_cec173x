@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="65">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="config" displayName="config" projectFiles="true">
+        <logicalFolder name="cec1736_evb" displayName="cec1736_evb" projectFiles="true">
+          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
+            <itemPath>../src/config/cec1736_evb/bsp/bsp.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="driver" displayName="driver" projectFiles="true">
+            <logicalFolder name="spi" displayName="spi" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/driver/spi/drv_spi.h</itemPath>
+              <itemPath>../src/config/cec1736_evb/driver/spi/src/drv_spi_local.h</itemPath>
+              <itemPath>../src/config/cec1736_evb/driver/spi/drv_spi_definitions.h</itemPath>
+            </logicalFolder>
+            <itemPath>../src/config/cec1736_evb/driver/driver.h</itemPath>
+            <itemPath>../src/config/cec1736_evb/driver/driver_common.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="osal" displayName="osal" projectFiles="true">
+            <itemPath>../src/config/cec1736_evb/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/cec1736_evb/osal/osal_impl_basic.h</itemPath>
+            <itemPath>../src/config/cec1736_evb/osal/osal.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="ec_reg_bank" displayName="ec_reg_bank" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/peripheral/ec_reg_bank/plib_ec_reg_bank.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="ecia" displayName="ecia" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/peripheral/ecia/plib_ecia.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="gpio" displayName="gpio" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/peripheral/gpio/plib_gpio.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/peripheral/nvic/plib_nvic.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="pcr" displayName="pcr" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/peripheral/pcr/plib_pcr.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="qmspi" displayName="qmspi" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/peripheral/qmspi/plib_qmspi_spi_common.h</itemPath>
+              <itemPath>../src/config/cec1736_evb/peripheral/qmspi/plib_qmspi0_spi.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="system" displayName="system" projectFiles="true">
+            <logicalFolder name="debug" displayName="debug" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/system/debug/sys_debug.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="int" displayName="int" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/system/int/sys_int_mapping.h</itemPath>
+              <itemPath>../src/config/cec1736_evb/system/int/sys_int.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="ports" displayName="ports" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/system/ports/sys_ports_mapping.h</itemPath>
+              <itemPath>../src/config/cec1736_evb/system/ports/sys_ports.h</itemPath>
+            </logicalFolder>
+            <itemPath>../src/config/cec1736_evb/system/system_module.h</itemPath>
+            <itemPath>../src/config/cec1736_evb/system/system.h</itemPath>
+            <itemPath>../src/config/cec1736_evb/system/system_common.h</itemPath>
+          </logicalFolder>
+          <itemPath>../src/config/cec1736_evb/sys_tasks.h</itemPath>
+          <itemPath>../src/config/cec1736_evb/device.h</itemPath>
+          <itemPath>../src/config/cec1736_evb/device_cache.h</itemPath>
+          <itemPath>../src/config/cec1736_evb/configuration.h</itemPath>
+          <itemPath>../src/config/cec1736_evb/definitions.h</itemPath>
+          <itemPath>../src/config/cec1736_evb/device_vectors.h</itemPath>
+          <itemPath>../src/config/cec1736_evb/user.h</itemPath>
+          <itemPath>../src/config/cec1736_evb/interrupts.h</itemPath>
+          <itemPath>../src/config/cec1736_evb/toolchain_specifics.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="packs" displayName="packs" projectFiles="true">
+        <logicalFolder name="CEC1736_S0_2ZW_DFP"
+                       displayName="CEC1736_S0_2ZW_DFP"
+                       projectFiles="true">
+          <logicalFolder name="component" displayName="component" projectFiles="true">
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/spi_mon.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/qmspi.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/ec_reg_bank.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/led.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/imspi.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/dma_chan00.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/otp.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/vtr_reg_bank.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/env_mon.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/pwm.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/ecia.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/tfdp.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/timer32.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/gcr.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/gpio.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/dma_chan02.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/smb.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/uart.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/cct.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/spt.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/pcr.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/dma_chan01.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/dma_main.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/rtos.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/component/htm.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="instance" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/timer32_0.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/ecia.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/dma_chan08.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/led1.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/spi_mon0.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/dma_chan00.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/smb3.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/dma_chan04.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/vtr_reg_bank.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/dma_main.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/spt0.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/dma_chan09.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/htm0.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/cct.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/dma_chan01.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/smb2.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/otp.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/dma_chan05.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/led0.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/pwm0.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/qmspi1.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/tfdp.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/spt1.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/dma_chan06.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/htm1.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/pcr.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/smb1.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/dma_chan02.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/rtos.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/timer32_1.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/gcr.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/imspi.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/gpio.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/qmspi0.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/dma_chan07.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/uart0.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/smb0.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/spi_mon1.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/dma_chan03.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/env_mon.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/smb4.h</itemPath>
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/instance/ec_reg_bank.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="pio" displayName="pio" projectFiles="true">
+            <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/pio/cec1736_s0_2zw.h</itemPath>
+          </logicalFolder>
+          <itemPath>../src/packs/CEC1736_S0_2ZW_DFP/cec1736_s0_2zw.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
+          <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
+            <logicalFolder name="Core" displayName="Core" projectFiles="true">
+              <logicalFolder name="Include" displayName="Include" projectFiles="true">
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm4.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>../src/app.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+      <logicalFolder name="config" displayName="config" projectFiles="true">
+        <logicalFolder name="cec1736_evb" displayName="cec1736_evb" projectFiles="true">
+          <itemPath>../src/config/cec1736_evb/CEC1736_S0_2ZW.ld</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="config" displayName="config" projectFiles="true">
+        <logicalFolder name="cec1736_evb" displayName="cec1736_evb" projectFiles="true">
+          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
+            <itemPath>../src/config/cec1736_evb/bsp/bsp.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="driver" displayName="driver" projectFiles="true">
+            <logicalFolder name="spi" displayName="spi" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/driver/spi/src/drv_spi.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="ec_reg_bank" displayName="ec_reg_bank" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/peripheral/ec_reg_bank/plib_ec_reg_bank.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="ecia" displayName="ecia" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/peripheral/ecia/plib_ecia.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="gpio" displayName="gpio" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/peripheral/gpio/plib_gpio.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/peripheral/nvic/plib_nvic.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="pcr" displayName="pcr" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/peripheral/pcr/plib_pcr.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="qmspi" displayName="qmspi" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/peripheral/qmspi/plib_qmspi0_spi.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
+            <itemPath>../src/config/cec1736_evb/stdio/xc32_monitor.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="system" displayName="system" projectFiles="true">
+            <logicalFolder name="int" displayName="int" projectFiles="true">
+              <itemPath>../src/config/cec1736_evb/system/int/src/sys_int.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../src/config/cec1736_evb/initialization.c</itemPath>
+          <itemPath>../src/config/cec1736_evb/tasks.c</itemPath>
+          <itemPath>../src/config/cec1736_evb/libc_syscalls.c</itemPath>
+          <itemPath>../src/config/cec1736_evb/interrupts.c</itemPath>
+          <itemPath>../src/config/cec1736_evb/startup_xc32.c</itemPath>
+          <itemPath>../src/config/cec1736_evb/exceptions.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/app.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+      <itemPath>w25_spi_flash_read_write_cec1736_evb.mc3</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="cec1736_evb" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>CEC1736_S0_2ZW</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>pk4hybrid</platformTool>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>4.21</languageToolchainVersion>
+        <platform>3</platform>
+      </toolsSet>
+      <packs>
+        <pack name="CEC_DFP" vendor="Microchip" version="1.8.258"/>
+        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
+      </packs>
+      <ScriptingSettings>
+      </ScriptingSettings>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+        <archiverTool>
+        </archiverTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <parseOnProdLoad>false</parseOnProdLoad>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+        <subordinates>
+        </subordinates>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <C32>
+        <property key="additional-warnings" value="true"/>
+        <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/cec1736_evb;../src/packs/CEC1736_S0_2ZW_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="true"/>
+        <property key="make-warnings-into-errors" value="true"/>
+        <property key="optimization-level" value="-O1"/>
+        <property key="place-data-into-section" value="true"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value="-fno-common"/>
+        <property key="toplevel-reordering" value=""/>
+        <property key="unaligned-access" value=""/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32>
+      <C32-AR>
+        <property key="additional-options-chop-files" value="false"/>
+      </C32-AR>
+      <C32-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="enable-symbols" value="true"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="false-conditionals" value="false"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC32asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="warning-level" value=""/>
+      </C32-AS>
+      <C32-CO>
+        <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
+      </C32-CO>
+      <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
+        <property key="additional-options-write-sla" value="false"/>
+        <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
+        <property key="code-dinit" value="false"/>
+        <property key="ebase-addr" value=""/>
+        <property key="enable-check-sections" value="false"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="exclude-standard-libraries" value="false"/>
+        <property key="extra-lib-directories" value=""/>
+        <property key="fill-flash-options-addr" value=""/>
+        <property key="fill-flash-options-const" value=""/>
+        <property key="fill-flash-options-how" value="0"/>
+        <property key="fill-flash-options-inc-const" value="1"/>
+        <property key="fill-flash-options-increment" value=""/>
+        <property key="fill-flash-options-seq" value=""/>
+        <property key="fill-flash-options-what" value="0"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="heap-size" value="512"/>
+        <property key="input-libraries" value=""/>
+        <property key="kseg-length" value=""/>
+        <property key="kseg-origin" value=""/>
+        <property key="linker-symbols" value=""/>
+        <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
+        <property key="no-device-startup-code" value="true"/>
+        <property key="no-startup-files" value="false"/>
+        <property key="oXC32ld-extra-opts" value=""/>
+        <property key="optimization-level" value=""/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="remove-unused-sections" value="true"/>
+        <property key="report-memory-usage" value="false"/>
+        <property key="serial-length" value=""/>
+        <property key="serial-origin" value=""/>
+        <property key="stack-size" value=""/>
+        <property key="symbol-stripping" value=""/>
+        <property key="trace-symbols" value=""/>
+        <property key="warn-section-align" value="false"/>
+      </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/cec1736_evb;../src/packs/CEC1736_S0_2ZW_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value="-O1"/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="toplevel-reordering" value=""/>
+        <property key="unaligned-access" value=""/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
+      <C32Global>
+        <property key="common-include-directories" value=""/>
+        <property key="gp-relative-option" value=""/>
+        <property key="legacy-libc" value="false"/>
+        <property key="mdtcm" value=""/>
+        <property key="mitcm" value=""/>
+        <property key="mstacktcm" value="false"/>
+        <property key="omit-pack-options" value="1"/>
+        <property key="relaxed-math" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
+        <property key="wpo-lto" value="false"/>
+      </C32Global>
+    </conf>
+  </confs>
+</configurationDescriptor>
