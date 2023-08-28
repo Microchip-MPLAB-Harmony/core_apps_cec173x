@@ -4904,7 +4904,7 @@
       </entry>
       <entry>
          <file>..\src\config\cec1736_evb\peripheral\qmspi\plib_qmspi_spi_common.h</file>
-         <hash>3b5c2bcc01019a0a971800a8004fba0af3edab07e0123e79e434d8d0ca372de8</hash>
+         <hash>7146ef57022a4dc1560ed5ebb1ae1e8d3b940d369392f004b273a4abc857b91e</hash>
       </entry>
       <entry>
          <file>..\src\packs\CEC1736_S0_2ZW_DFP\component\qmspi.h</file>

@@ -68,11 +68,6 @@ Interface definition of QMSPI PLIB.
 // Section: Data Types
 // *****************************************************************************
 // *****************************************************************************
-typedef enum
-{
-    QMSPI_CHIP_SELECT_0 = 0U,
-    QMSPI_CHIP_SELECT_1
-} QMSPI_CHIP_SELECT;
 
 typedef enum
 {
