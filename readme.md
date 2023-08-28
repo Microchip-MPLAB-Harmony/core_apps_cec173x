@@ -45,6 +45,7 @@ The following applications are provided to demonstrate the typical or interestin
 | [FreeRTOS basic](apps/rtos/freertos/basic_freertos/readme.md) | This example application demonstrates context switching between four tasks of different priorites. Two tasks run periodically while the other two tasks are event driven |
 | [Console Debug System Service using UART](apps/system/console_debug/sys_console_debug_uart_read_write/readme.md) | This example application demonstrates the UART based console and debug system service |
 | [Time System Service multi-client](apps/system/time/sys_time_multiclient/readme.md) | This example application demonstrates the multi-client system timer functionality |
+| [W25 SPI Flash Read Write](apps/driver/spi/async/w25_spi_flash_read_write/readme.md) | This example application shows how to use the SPI driver to perform read and write operations on the on-board W25 Flash memory using the QMSPI peripheral library in SPI mode |
 
 ____
 

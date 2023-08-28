@@ -8,6 +8,30 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 peripheral library application examples for CEC173x family  v3.2.0
+
+### Development kit and demo application support
+
+Following table provides number of peripheral library examples available for different development kits.
+
+| Development Kits  | MPLAB X applications |
+|:-----------------:|:-------------------:|
+| [CEC1736 Development Board](https://www.microchip.com/en-us/development-tool/EV19K07A) | 10 |
+
+### New Features
+
+- Added SPI driver demo example in Asynchronous mode that demonstrates read and write operations on the W25 serial flash memory using QMSPI peripheral in SPI mode.
+
+### Known Issues
+
+- None
+
+### Development Tools
+
+- Same as v3.1.0
+
+# Microchip MPLAB® Harmony 3 Release Notes
+
 ## Harmony 3 peripheral library application examples for CEC173x family  v3.1.0
 
 ### Development kit and demo application support
