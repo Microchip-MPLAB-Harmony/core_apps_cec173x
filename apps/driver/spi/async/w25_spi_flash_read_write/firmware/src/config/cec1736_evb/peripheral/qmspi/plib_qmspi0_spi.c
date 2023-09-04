@@ -133,7 +133,7 @@ bool QMSPI0_SPI_IsBusy (void)
 
 bool QMSPI0_SPI_IsTransmitterBusy(void)
 {
-    return ((QMSPI0_REGS->QMSPI_STS & QMSPI_STS_TRANS_ACTIV_Msk) != 0);
+    return ((QMSPI0_REGS->QMSPI_STS & QMSPI_STS_TRANS_ACTIV_Msk) != 0U);
 }
 
 
@@ -163,25 +163,25 @@ bool QMSPI0_SPI_WriteRead (void* pTransmitData, size_t txSize, void* pReceiveDat
         qmspi0Obj.pRxBuffer = pReceiveData;
         qmspi0Obj.rxPending = 0;
         qmspi0Obj.txPending = 0;
-        qmspi0Obj.txDummyData = 0xFFFFFFFF;
+        qmspi0Obj.txDummyData = 0xFFFFFFFFU;
 
-        if ((qmspi0Obj.rxSize == qmspi0Obj.txSize) || (qmspi0Obj.rxSize == 0) || (qmspi0Obj.txSize == 0))
+        if ((rxSize == txSize) || (rxSize == 0U) || (txSize == 0U))
         {
             // Transfer size will be the max of qmspi0Obj.rxSize and qmspi0Obj.txSize
-            transferSize = qmspi0Obj.rxSize > qmspi0Obj.txSize ? qmspi0Obj.rxSize : qmspi0Obj.txSize;
+            transferSize = rxSize > txSize ? rxSize : txSize;
         }
         else
         {
             // Transfer size will be min of qmspi0Obj.rxSize and qmspi0Obj.txSize
-            transferSize = qmspi0Obj.rxSize > qmspi0Obj.txSize ? qmspi0Obj.txSize : qmspi0Obj.rxSize;
+            transferSize = rxSize > txSize ? txSize : rxSize;
 
-            if (qmspi0Obj.rxSize > qmspi0Obj.txSize)
+            if (rxSize > txSize)
             {
-                qmspi0Obj.rxPending = (qmspi0Obj.rxSize - qmspi0Obj.txSize);
+                qmspi0Obj.rxPending = (rxSize - txSize);
             }
             else
             {
-                qmspi0Obj.txPending = (qmspi0Obj.txSize - qmspi0Obj.rxSize);
+                qmspi0Obj.txPending = (txSize - rxSize);
             }
         }
 
@@ -196,9 +196,12 @@ bool QMSPI0_SPI_WriteRead (void* pTransmitData, size_t txSize, void* pReceiveDat
 
         QMSPI0_REGS->QMSPI_CTRL = QMSPI_CTRL_TRANS_UNITS(0x01) | QMSPI_CTRL_TRANS_LEN(transferSize) | QMSPI_CTRL_TX_TRANS_EN(0x01) | QMSPI_CTRL_TX_DMA_EN(1) | QMSPI_CTRL_RX_TRANS_EN_Msk | QMSPI_CTRL_RX_DMA_EN(1);
 
-        if ((qmspi0Obj.txPending == 0U) && (qmspi0Obj.rxPending == 0U))
+        if (qmspi0Obj.txPending == 0U)
         {
-            QMSPI0_REGS->QMSPI_CTRL |= QMSPI_CTRL_CLOSE_TRANS_EN_Msk;
+            if (qmspi0Obj.rxPending == 0U)
+            {
+                QMSPI0_REGS->QMSPI_CTRL |= QMSPI_CTRL_CLOSE_TRANS_EN_Msk;
+            }
         }
 
         if (txAddrInc)
@@ -243,8 +246,12 @@ void __attribute__((used)) QMSPI0_InterruptHandler(void)
     bool txAddrInc = false;
     bool rxAddrInc = false;
     size_t transferSize;
+    size_t txPending = qmspi0Obj.txPending;
+    size_t rxPending = qmspi0Obj.rxPending;
+    size_t txSize = qmspi0Obj.txSize;
+    size_t rxSize = qmspi0Obj.rxSize;
 
-    if (ECIA_GIRQResultGet(ECIA_DIR_INT_SRC_QMSPI0))
+    if (ECIA_GIRQResultGet(ECIA_DIR_INT_SRC_QMSPI0) != 0U)
     {
         ECIA_GIRQSourceClear(ECIA_DIR_INT_SRC_QMSPI0);
 
@@ -252,19 +259,19 @@ void __attribute__((used)) QMSPI0_InterruptHandler(void)
         {
             QMSPI0_REGS->QMSPI_STS |= QMSPI_STS_TRANS_COMPL_Msk;
 
-            if ( ((QMSPI0_REGS->QMSPI_CTRL & QMSPI_CTRL_DESCR_BUFF_EN_Msk) == 0U) && ((qmspi0Obj.txPending > 0U) || (qmspi0Obj.rxPending > 0U)) )
+            if ( ((QMSPI0_REGS->QMSPI_CTRL & QMSPI_CTRL_DESCR_BUFF_EN_Msk) == 0U) && ((txPending > 0U) || (rxPending > 0U)) )
             {
-                txAddrInc = qmspi0Obj.txPending > 0? true : false;
-                rxAddrInc = qmspi0Obj.rxPending > 0? true : false;
+                txAddrInc = qmspi0Obj.txPending > 0U? true : false;
+                rxAddrInc = qmspi0Obj.rxPending > 0U? true : false;
 
-                transferSize = qmspi0Obj.txPending > qmspi0Obj.rxPending? qmspi0Obj.txPending : qmspi0Obj.rxPending;
+                transferSize = txPending > rxPending? txPending : rxPending;
 
                 QMSPI0_REGS->QMSPI_CTRL = QMSPI_CTRL_TRANS_UNITS(0x01) | QMSPI_CTRL_TRANS_LEN(transferSize) | QMSPI_CTRL_TX_TRANS_EN(0x01) | QMSPI_CTRL_TX_DMA_EN(1) | QMSPI_CTRL_RX_TRANS_EN_Msk | QMSPI_CTRL_RX_DMA_EN(1)  | QMSPI_CTRL_CLOSE_TRANS_EN_Msk ;
 
                 if (txAddrInc)
                 {
                     QMSPI0_REGS->LDMA_TX[0].QMSPI_LDMA_TXCTRL = QMSPI_LDMA_TXCTRL_CH_EN_Msk | QMSPI_LDMA_TXCTRL_INC_ADDR_EN_Msk;
-                    QMSPI0_REGS->LDMA_TX[0].QMSPI_LDMA_TXSTRT_ADDR = (uint32_t)&qmspi0Obj.pTxBuffer[qmspi0Obj.txSize - qmspi0Obj.txPending];
+                    QMSPI0_REGS->LDMA_TX[0].QMSPI_LDMA_TXSTRT_ADDR = (uint32_t)&qmspi0Obj.pTxBuffer[txSize - txPending];
                 }
                 else
                 {
@@ -277,7 +284,7 @@ void __attribute__((used)) QMSPI0_InterruptHandler(void)
                 if (rxAddrInc)
                 {
                     QMSPI0_REGS->LDMA_RX[0].QMSPI_LDMA_RXCTRL = QMSPI_LDMA_RXCTRL_CH_EN_Msk | QMSPI_LDMA_RXCTRL_INC_ADDR_EN_Msk;
-                    QMSPI0_REGS->LDMA_RX[0].QMSPI_LDMA_RXSTRT_ADDR = (uint32_t)&qmspi0Obj.pRxBuffer[qmspi0Obj.rxSize - qmspi0Obj.rxPending];
+                    QMSPI0_REGS->LDMA_RX[0].QMSPI_LDMA_RXSTRT_ADDR = (uint32_t)&qmspi0Obj.pRxBuffer[rxSize - rxPending];
                 }
                 else
                 {
