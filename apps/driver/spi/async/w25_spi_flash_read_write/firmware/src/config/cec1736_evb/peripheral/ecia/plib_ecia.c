@@ -43,9 +43,7 @@
 
 void ECIA_Initialize(void)
 {
-        ECIA_REGS->ECIA_EN_SET18 = 0x2;
-
-    ECIA_REGS->ECIA_BLK_EN_SET = 0x40000;
+    
 }
 void ECIA_GIRQBlockEnable(ECIA_GIRQ_BLOCK_NUM block)
 {
