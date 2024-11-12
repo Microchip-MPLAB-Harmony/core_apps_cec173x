@@ -308,7 +308,7 @@ static void __attribute__((used)) UART0_ERROR_InterruptHandler (void)
 
 static void __attribute__((used)) UART0_RX_InterruptHandler (void)
 {
-    uint8_t lsr;
+    uint32_t lsr;
 
     if(uart0Obj.rxBusyStatus == true)
     {
@@ -322,7 +322,7 @@ static void __attribute__((used)) UART0_RX_InterruptHandler (void)
             /* Check for overrun, parity and framing errors */
             uart0Obj.errors = (lsr & (UART_DATA_LSR_OVERRUN_Msk | UART_DATA_LSR_PE_Msk | UART_DATA_LSR_FRAME_ERR_Msk));
 
-            if (((lsr & UART_DATA_LSR_DATA_READY_Msk) != 0U) && ((uint32_t)uart0Obj.errors == 0U))
+            if ((uart0Obj.errors == 0U) && ((lsr & UART_DATA_LSR_DATA_READY_Msk) != 0U))
             {
                 uart0Obj.rxBuffer[rxProcessedSize] = UART0_REGS->DATA.UART_RX_DAT;
                 rxProcessedSize++;
