@@ -239,11 +239,11 @@
         <targetPluginBoard/>
         <platformTool>pk4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.21</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CEC_DFP" vendor="Microchip" version="1.8.258"/>
+        <pack name="CEC_DFP" vendor="Microchip" version="2.0.261"/>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>

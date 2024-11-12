@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2023-01-17T13:00:30Z */
+/* file generated from device description version 2023-06-01T13:00:30Z */
 #ifndef _CEC_DMA_CHAN07_INSTANCE_
 #define _CEC_DMA_CHAN07_INSTANCE_
 
