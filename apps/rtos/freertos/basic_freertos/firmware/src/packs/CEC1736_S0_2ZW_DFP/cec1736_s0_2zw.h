@@ -20,7 +20,7 @@
  *
  */
 
-/* File generated from device description version 2023-01-17T13:00:30Z */
+/* File generated from device description version 2023-06-01T13:00:30Z */
 #ifndef _CEC1736_S0_2ZW_H_
 #define _CEC1736_S0_2ZW_H_
 
