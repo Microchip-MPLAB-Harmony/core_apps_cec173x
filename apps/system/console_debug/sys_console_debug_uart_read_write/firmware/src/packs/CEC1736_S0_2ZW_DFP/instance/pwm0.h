@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2023-01-17T13:00:30Z */
+/* file generated from device description version 2023-06-01T13:00:30Z */
 #ifndef _CEC_PWM0_INSTANCE_
 #define _CEC_PWM0_INSTANCE_
 
