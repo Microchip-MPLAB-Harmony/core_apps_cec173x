@@ -7,12 +7,12 @@ package:
   required: false
 
   dependencies:
-    - name: "FreeRTOS-Kernel"
+    - name: "bsp"
       type: "package"
-      version: "V11.1.0"
+      version: "v3.21.1"
     - name: "core"
       type: "package"
       version: "v3.14.0"
-    - name: "bsp"
+    - name: "FreeRTOS-Kernel"
       type: "package"
-      version: "v3.17.0"
+      version: "V11.1.0"
